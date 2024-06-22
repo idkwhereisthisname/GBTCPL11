@@ -17,7 +17,7 @@ ADD.REG
 @echo credits to winaero :3
 @echo Restoring classic user accounts (netplwiz)
 cd ..
-cd ACCPL
+cd ACCCPL
 ADD.REG
 @echo credits to winaero :3 (again)
 :: here starts the display options restore
