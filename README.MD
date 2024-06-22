@@ -12,10 +12,10 @@ To get access to the system/about page in the control panel, use [ExplorerPatche
 
 One last thing, the folder has be unzipped in the downloads folder for it to work. And do not rename anything.
 
+Testers are always welcome (I cant get a VM because my pc only has 8GB of RAM).
+
 ## What i can't get to work
 
 Taskbar properties/Navigation properties
 
 Default programs page
-
-Testers are always welcome (I cant get a VM because my pc only has 8GB of RAM).
