@@ -1,5 +1,3 @@
-GBTCPL11 (Go Back To Control Panel 11) restores (almost) all of the control panel settings on Windows 11
-
 ## !IMPORTANT NOTICE!
 
 Restoring the Display options will only work on your locale! For example, if my locale is it-IT, it wont work for me if i set it to en-US, so you have to replace the language in the bat file matching your pc language.
