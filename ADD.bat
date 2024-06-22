@@ -61,3 +61,5 @@ reg add HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\
 @explorer
 @echo Done. Exiting...
 exit
+:: to do
+:: cleanup the code (ex. if youre in the windows folder, from cd %SYSTEMROOT%\Windows\System32 to cd System32
