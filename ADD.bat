@@ -18,8 +18,8 @@ cd %SYSTEMROOT%\System32
 takeown /f display.dll
 ren display.dll displayold.dll
 cd %USERPROFILE%\Downloads\GBTCPL11\displaycpl\dll
-xcopy Display.dll C:\Windows\System32\
-cd C:\Windows\your-locale\
+xcopy Display.dll %SYSTEMROOT%\System32\
+cd %SYSTEMROOT%\System32\your-locale\
 takeown /f Display.dll.mui
 ren Display.dll.mui Displayold.dll.mui
 cd %USERPROFILE%\Downloads\GBTCPL11\displaycpl\DLL
