@@ -1,4 +1,4 @@
-## !IMPORTANT NOTICE!
+## !IMPORTANT NOTICES!
 
 1. Restoring the Display options will only work on your locale! For example, if my locale is it-IT, it wont work for me if i set it to en-US, so you have to replace the language in the bat file matching your pc language.
 
