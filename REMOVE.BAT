@@ -19,21 +19,21 @@ cd ..
 cd DISPLAYCPL
 cd REG
 REMOVE.reg
-cd %SYSTEMROOT%\system32\
-del Display.dll
-ren Displayold.dll Display.dll
+cd %SYSTEMROOT%\System32\
+del %SYSTEMROOT%\System32\Display.dll
+ren %SYSTEMROOT%\System32\Displayold.dll Display.dll
 cd %SYSTEMROOT%\your-locale
-del display.dll.mui
-ren displayold.dll.mui display.dll.mui
+del %SYSTEMROOT%\your-locale\Display.dll.mui
+ren %SYSTEMROOT%\Displayold.dll.mui Display.dll.mui
 cd %SYSTEMROOT%\SystemResources\
-del shell32.dll.mun
-ren shell32old.dll.mun shell32.dll.mun
+del %SYSTEMROOT%\Shell32.dll.mun
+ren %SYSTEMROOT%Shell32old.dll.mun Shell32.dll.mun
 cd %SYSTEMROOT%\System32\your-locale
-del shell32.dll.mui
-ren shell32old.dll.mui shell32.dll.mui
-cd %USERPROFILE%\Downloads\GBTCPL11\
+del %SYSTEMROOT%\System32\your-locale\Shell32.dll.mui
+ren %SYSTEMROOT%\System32\your-locale\Shell32old.dll.mui shell32.dll.mui
+cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\
 @echo Reverting the Registry entries...
-reg add HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceDLL
+reg delete HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceDLL
 reg delete HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceID
 @echo Restarting explorer...
 taskkill /f /im explorer.exe
