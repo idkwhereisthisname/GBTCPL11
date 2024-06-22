@@ -26,7 +26,7 @@ cd %SYSTEMROOT%\System32\your-locale\
 takeown /f %SYSTEMROOT%\System32\your-locale\Display.dll.mui
 ren %SYSTEMROOT%\System32\your-locale\Display.dll.mui Displayold.dll.mui
 cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\displaycpl\DLL
-xcopy %USERPROFILE%\DISPLAYCPL\DLL\Display.dll.mui %SYSTEMROOT%\System32\your-locale
+xcopy %USERPROFILE%\Downloads\DISPLAYCPL\DLL\Display.dll.mui %SYSTEMROOT%\System32\your-locale
 cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\REG
 ADD.REG
 cd %SYSTEMROOT%\SystemResources
@@ -34,7 +34,7 @@ cd %SYSTEMROOT%\SystemResources
 takeown /f %SYSTEMROOT%\SystemResources\shell32.dll.mun
 ren %SYSTEMROOT%\SystemResources\Shell32.dll.mun Shell32old.dll.mun
 cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\SHELL32\
-xcopy %USERPROFILE%\GBTCPL11\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mun %SYSTEMROOT%\SystemResources
+xcopy %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mun %SYSTEMROOT%\SystemResources
 cd ..
 cd %SYSTEMROOT%\System32\your-locale
 :: i wanted to put the entire directory to avoid confusion lol
