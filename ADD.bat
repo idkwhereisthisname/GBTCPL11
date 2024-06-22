@@ -1,7 +1,7 @@
 @echo Welcome to GBTCPL11! This is still in beta and things may change.
 @echo also plz click yes on every dialog window that will pop up.
-@echo for now, the displaycpl cannot be restored.
 @echo if you get an invalid directory error, change the directory from "your-locale" to your system language, ex. from %SYSTEMROOT%\your-locale to %SYSTEMROOT%\en-US
+@echo made by idkwhereisthisname :3
 @echo Restoring the classic personalization settings...
 cd personalizationcpl
 ADD.REG
@@ -9,10 +9,17 @@ ADD.REG
 cd ..
 cd NOTIFCPL
 ADD.REG
+@echo credits to me (i made this) :3
 @echo Restoring the classic color settings...
 cd ..
 cd COLORCPL
 ADD.REG
+@echo credits to winaero :3
+@echo Restoring classic user accounts (netplwiz)
+cd ..
+cd ACCPL
+ADD.REG
+@echo credits to winaero :3 (again)
 :: here starts the display options restore
 @echo Restoring the classic Display settings (also restores the links)
 cd %SYSTEMROOT%\System32
