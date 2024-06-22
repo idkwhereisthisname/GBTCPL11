@@ -3,7 +3,7 @@ cd %SYSTEMROOT%\System32
 takeown /f display.dll
 ren display.dll displayold.dll
 cd %USERPROFILE%\Downloads\GBTCPL11\displaycpl\dll
-xcopy Display.dll C:\Windows\System32\
+xcopy Display.dll %SYSTEMROOT%\System32\
 cd C:\Windows\your-locale\
 takeown /f Display.dll.mui
 ren Display.dll.mui Displayold.dll.mui
@@ -18,7 +18,6 @@ cd %USERPROFILE%\Downloads\GBTCPL11\DISPLAYCPL\SHELL32\
 xcopy shell32.dll.mun %SYSTEMROOT%\SystemResources
 cd ..
 cd %SYSTEMROOT%\System32\your-locale
-:: i wanted to put the entire directory to avoid confusion lol
 takeown /f shell32.dll.mui
 ren shell32.dll.mui shell32old.dll.mui
 cd %USERPROFILE%\Downloads\GBTCPL11\SHELL32\
