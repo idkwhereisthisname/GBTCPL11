@@ -1,4 +1,4 @@
-This small script restores (almost) all of the control panel settings on Windows 11
+GBTCPL11 (Go Back To Control Panel 11) restores (almost) all of the control panel settings on Windows 11
 
 ## !IMPORTANT NOTICE!
 
