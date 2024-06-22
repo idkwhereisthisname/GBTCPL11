@@ -1,18 +1,22 @@
 @echo Removing GBTCPL11...
 @echo click yes on every dialog
+@echo made by idkwhereisthisname :3
 :: change the directory from "your-locale" to your system language, more info in the README.MD
 @echo Removing the classic personalization settings...
 cd personalizationcpl
 :: decided to not call it rem.reg because rem is a command apparently duh
 REMOVE.reg
+@echo credits to winaero :3
 @echo Removing the classic notification area icons settings...
 cd ..
 cd NOTIFCPL
 REMOVE.REG
+@echo credits to me :3 (i made this)
 @echo Removing the classic color settings....
 cd ..
 cd COLORCPL
 REMOVE.REG
+@echo credits to winaero :3 (again)
 :: ok now for the long part...
 @echo Reverting the classic display settings...
 cd ..
