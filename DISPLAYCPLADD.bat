@@ -1,3 +1,4 @@
+echo This script is deprecated, please use the full installer for the newest bug fixes!
 @echo Restoring the classic Display settings (also restores the links)
 cd %SYSTEMROOT%\System32
 @echo Taking ownership of Display.dll...
