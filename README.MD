@@ -8,7 +8,9 @@
 
 4. To get access to the system/about page in the control panel, use [ExplorerPatcher](https://github.com/valinet/ExplorerPatcher)
 
-5. One last thing, the folder has be unzipped in the downloads folder for it to work. And do not rename anything.
+5. Note that you should run the script as an administrator
+
+6. One last thing, the folder has be unzipped in the downloads folder for it to work. And do not rename anything.
 
 Testers are always welcome (I cant get a VM because my pc only has 8GB of RAM).
 
