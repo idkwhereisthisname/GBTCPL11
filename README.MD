@@ -1,4 +1,4 @@
-This small tool restores (almost) all of the control panel settings on Windows 11
+This small script restores (almost) all of the control panel settings on Windows 11
 
 ## !IMPORTANT NOTICE!
 
