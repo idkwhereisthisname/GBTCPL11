@@ -50,8 +50,8 @@ cd %SYSTEMROOT%\System32\en-US
 takeown /f %SYSTEMROOT%\System32\en-US\Shell32.dll.mui
 icacls "%SYSTEMROOT%\System32\en-US\Shell32.dll.mui" /grant USERNAME:F
 ren %SYSTEMROOT%\System32\en-US\Shell32.dll.mui Shell32old.dll.mui
-cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\SHELL32
-xcopy %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mui %SYSTEMROOT%\System32\en-US\
+cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32
+xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mui %SYSTEMROOT%\System32\en-US\
 reg add HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceDLL /t REG_EXPAND_SZ /d %SYSTEMROOT%\System32\Display.dll
 reg add HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceID /t REG_DWORD /d 65
 @echo Restarting explorer.exe
