@@ -40,7 +40,7 @@ cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\REG
 ADD.REG
 cd %SYSTEMROOT%\SystemResources
 takeown /f %SYSTEMROOT%\SystemResources\Shell32.dll.mun
-icacls "%SYSTEMROOT%\SystemResources\Shel32.dll.mun" /grant USERNAME:F
+icacls "%SYSTEMROOT%\SystemResources\Shell32.dll.mun" /grant USERNAME:F
 ren %SYSTEMROOT%\SystemResources\Shell32.dll.mun Shell32old.dll.mun
 cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\
 xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mun %SYSTEMROOT%\SystemResources
