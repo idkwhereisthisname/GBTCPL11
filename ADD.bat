@@ -39,24 +39,24 @@ xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\DLL\Display.dll.mui %SYST
 cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\REG
 ADD.REG
 cd %SYSTEMROOT%\SystemResources
+taskkill /f /im explorer.exe
 takeown /f %SYSTEMROOT%\SystemResources\Shell32.dll.mun
 icacls "%SYSTEMROOT%\SystemResources\Shell32.dll.mun" /grant USERNAME:F
 ren %SYSTEMROOT%\SystemResources\Shell32.dll.mun Shell32old.dll.mun
 cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\
-xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mun %SYSTEMROOT%\SystemResources
+xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\shell32.dll.mun %SYSTEMROOT%\SystemResources
 cd ..
 cd %SYSTEMROOT%\System32\en-US
 :: i wanted to put the entire directory to avoid confusion lol
-takeown /f %SYSTEMROOT%\System32\en-US\Shell32.dll.mui
-icacls "%SYSTEMROOT%\System32\en-US\Shell32.dll.mui" /grant USERNAME:F
-ren %SYSTEMROOT%\System32\en-US\Shell32.dll.mui Shell32old.dll.mui
+takeown /f %SYSTEMROOT%\System32\en-US\shell32.dll.mui
+icacls "%SYSTEMROOT%\System32\en-US\shell32.dll.mui" /grant USERNAME:F
+ren %SYSTEMROOT%\System32\en-US\shell32.dll.mui shell32old.dll.mui
 cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32
-xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mui %SYSTEMROOT%\System32\en-US\
+xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\shell32.dll.mui %SYSTEMROOT%\System32\en-US\
 reg add HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceDLL /t REG_EXPAND_SZ /d %SYSTEMROOT%\System32\Display.dll
 reg add HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceID /t REG_DWORD /d 65
 @echo Restarting explorer.exe
-@taskkill /f /im explorer.exe
-@explorer
+explorer
 @echo Done. Exiting...
 exit
 :: to do
