@@ -79,7 +79,7 @@ cd %USERPROFILE%\downloads\gbtcpl11-main\WINUPD\reg
 WUCLTUX.REG
 regsvr32 wucltux.dll
 @echo.
-@echo Credits to a WinClassic thread (https://winclassic.net/thread/1779/restoring-control-panel-pages-links)
+@echo Credits to a WinClassic thread (https://winclassic.net/thread/1779/restoring-control-panel-pages-links), I made the remove registry file, though
 @echo.
 @echo Done! You can now close this window
 @explorer
