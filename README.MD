@@ -1,6 +1,6 @@
 ## !IMPORTANT NOTICES!
 
-1. Restoring the Display options will only work on your locale! For example, if my locale is it-IT, it wont work for me if i set it to en-US, so you have to replace the language in the bat file matching your pc language.
+1. The control panel items will always be in English (en-US)
 
 2. Also no harm should be done to your PC, though I am not responsible for any damage.
 
@@ -10,7 +10,9 @@
 
 5. If you cant run the script as TrustedInstaller, run it as an administrator
 
-6. One last thing, the folder has be unzipped in the downloads folder for it to work. And do not rename anything.
+6. Modify the ADD.bat file and place your acutal Windows username instead of "USERNAME"
+
+7. One last thing, the folder has be unzipped in the downloads folder for it to work. And do not rename anything.
 
 Testers are always welcome (I cant get a VM because my pc only has 8GB of RAM).
 

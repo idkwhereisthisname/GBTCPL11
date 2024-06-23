@@ -1,5 +1,6 @@
 @echo Welcome to GBTCPL11! This is still in beta and things may change.
 @echo also plz click yes on every dialog window that will pop up.
+@echo if you get an access denied error, replace "USERNAME" with your acutal Windows username.
 @echo made by idkwhereisthisname :3
 @echo Restoring the classic personalization settings...
 cd personalizationcpl
@@ -24,32 +25,30 @@ ADD.REG
 cd %SYSTEMROOT%\System32
 @echo Taking ownership of Display.dll...
 takeown /f %SYSTEMROOT%\System32\Display.dll
-icacls "%SYSTEMROOT%\System32\Display.dll" /grant Users:F
+icacls "%SYSTEMROOT%\System32\Display.dll" /grant USERNAME:F
 ren %SYSTEMROOT%\System32\Display.dll Displayold.dll
 cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\DLL
 xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\DLL\Display.dll %SYSTEMROOT%\System32\
 cd %SYSTEMROOT%\System32\en-US\
 @echo Taking ownership of Display.dll.mui...
 takeown /f %SYSTEMROOT%\System32\en-US\Display.dll.mui
-icacls "%SYSTEMROOT%\System32\en-US"\Display.dll.mui /grant Users:F
+icacls "%SYSTEMROOT%\System32\en-US"\Display.dll.mui /grant USERNAME:F
 ren %SYSTEMROOT%\System32\en-US\Display.dll.mui Displayold.dll.mui
 cd %USERPROFILE%\Downloads\GBTCPL11-main\displaycpl\DLL
 xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\DLL\Display.dll.mui %SYSTEMROOT%\System32\en-US
 cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\REG
 ADD.REG
 cd %SYSTEMROOT%\SystemResources
-@echo Taking ownership of Shell32.dll.mun...
 takeown /f %SYSTEMROOT%\SystemResources\Shell32.dll.mun
-icacls "%SYSTEMROOT%\SystemResources\Shel32.dll.mun" /grant Users:F
+icacls "%SYSTEMROOT%\SystemResources\Shel32.dll.mun" /grant USERNAME:F
 ren %SYSTEMROOT%\SystemResources\Shell32.dll.mun Shell32old.dll.mun
-@echo Taking ownership of Shell32.dll.mui
 cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\
 xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mun %SYSTEMROOT%\SystemResources
 cd ..
 cd %SYSTEMROOT%\System32\en-US
 :: i wanted to put the entire directory to avoid confusion lol
 takeown /f %SYSTEMROOT%\System32\en-US\Shell32.dll.mui
-icacls "%SYSTEMROOT%\System32\en-US\Shell32.dll.mui" /grant Users:F
+icacls "%SYSTEMROOT%\System32\en-US\Shell32.dll.mui" /grant USERNAME:F
 ren %SYSTEMROOT%\System32\en-US\Shell32.dll.mui Shell32old.dll.mui
 cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\SHELL32
 xcopy %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mui %SYSTEMROOT%\System32\en-US\
