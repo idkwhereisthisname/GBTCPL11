@@ -20,7 +20,7 @@ cd ..
 cd ACCCPL
 ADD.REG
 @echo credits to winaero :3 (again)
-:: here starts the display options restore
+: here starts the display options restore
 @echo Restoring the classic Display settings (also restores the links)
 cd %SYSTEMROOT%\System32
 @echo Taking ownership of Display.dll...
@@ -40,24 +40,27 @@ cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\REG
 ADD.REG
 cd %SYSTEMROOT%\SystemResources
 taskkill /f /im explorer.exe
-takeown /f %SYSTEMROOT%\SystemResources\Shell32.dll.mun
-icacls "%SYSTEMROOT%\SystemResources\Shell32.dll.mun" /grant USERNAME:F
-ren %SYSTEMROOT%\SystemResources\Shell32.dll.mun Shell32old.dll.mun
-cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\
-xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\shell32.dll.mun %SYSTEMROOT%\SystemResources
-cd ..
-cd %SYSTEMROOT%\System32\en-US
-:: i wanted to put the entire directory to avoid confusion lol
-takeown /f %SYSTEMROOT%\System32\en-US\shell32.dll.mui
-icacls "%SYSTEMROOT%\System32\en-US\shell32.dll.mui" /grant USERNAME:F
+: old method which doesnt work
+: takeown /f "%SYSTEMROOT%\SystemResources\Shell32.dll.mun"
+: icacls "%SYSTEMROOT%\SystemResources\Shell32.dll.mun" /grant USER:F
+: ren "%SYSTEMROOT%\SystemResources\Shell32.dll.mun" "Shell32old.dll.mun"
+: cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32
+takeown /f %SYSTEMROOT%\SystemResources
+icacls "%SYSTEMROOT%\SystemResources" /grant USERNAME:F
+xcopy "%USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\shell32.dll.mun" %SYSTEMROOT%\SystemResources
+: also old method which doesnt work
+: cd %SYSTEMROOT%\System32\en-su
+: takeown /f %SYSTEMROOT%\System32\en-su\shell32.dll.mui
+: icacls "%SYSTEMROOT%\System32\en-su\shell32.dll.mui" /grant USER:F
+takeown /f %SYSTEMROOT%\System32\en-US\
+icacls "%SYSTEMROOT%\System32\en-US" /grant USERNAME:F
 ren %SYSTEMROOT%\System32\en-US\shell32.dll.mui shell32old.dll.mui
 cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32
 xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\shell32.dll.mui %SYSTEMROOT%\System32\en-US\
 reg add HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceDLL /t REG_EXPAND_SZ /d %SYSTEMROOT%\System32\Display.dll
 reg add HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceID /t REG_DWORD /d 65
-@echo Restarting explorer.exe
-explorer
-@echo Done. Exiting...
+@echo Done! You can now close this window
+@explorer
 exit
-:: to do
-:: cleanup the code (ex. if youre in the windows folder, from cd %SYSTEMROOT%\Windows\System32 to cd System32
+: to do
+: cleanup the code (ex. if youre in the windows folder, from cd %SYSTEMROOT%\Windows\System32 to cd System32
