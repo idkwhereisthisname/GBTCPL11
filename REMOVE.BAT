@@ -17,6 +17,10 @@ cd ..
 cd COLORCPL
 REMOVE.REG
 @echo credits to winaero :3 (again)
+@echo.
+@echo Removing classic user accounts (netplwiz)...
+cd acccpl
+remove.reg
 :: ok now for the long part...
 @echo Reverting the classic display settings...
 cd ..
@@ -37,7 +41,7 @@ ren %SYSTEMROOT%Shell32old.dll.mun Shell32.dll.mun
 cd %SYSTEMROOT%\System32\your-locale
 del %SYSTEMROOT%\System32\your-locale\Shell32.dll.mui
 ren %SYSTEMROOT%\System32\your-locale\Shell32old.dll.mui Shell32.dll.mui
-cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\
+cd %USERPROFILE%\Downloads\GBTCPL11-main\
 @echo Reverting the Registry entries...
 reg delete HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceDLL
 reg delete HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceID

@@ -27,16 +27,16 @@ cd %SYSTEMROOT%\System32
 takeown /f %SYSTEMROOT%\System32\Display.dll
 icacls "%SYSTEMROOT%\System32\Display.dll" /grant Users:F
 ren %SYSTEMROOT%\System32\Display.dll Displayold.dll
-cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\DLL
-xcopy %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\DLL\Display.dll %SYSTEMROOT%\System32\
+cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\DLL
+xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\DLL\Display.dll %SYSTEMROOT%\System32\
 cd %SYSTEMROOT%\System32\your-locale\
 @echo Taking ownership of Display.dll.mui...
 takeown /f %SYSTEMROOT%\System32\your-locale\Display.dll.mui
-icacls "%SYSTEMROOT%\System32\your-locale" /grant Users:F
+icacls "%SYSTEMROOT%\System32\your-locale"\Display.dll.mui /grant Users:F
 ren %SYSTEMROOT%\System32\your-locale\Display.dll.mui Displayold.dll.mui
-cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\displaycpl\DLL
-xcopy %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\DLL\Display.dll.mui %SYSTEMROOT%\System32\your-locale
-cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\REG
+cd %USERPROFILE%\Downloads\GBTCPL11-main\displaycpl\DLL
+xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\DLL\Display.dll.mui %SYSTEMROOT%\System32\your-locale
+cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\REG
 ADD.REG
 cd %SYSTEMROOT%\SystemResources
 @echo Taking ownership of Shell32.dll.mun...
@@ -44,8 +44,8 @@ takeown /f %SYSTEMROOT%\SystemResources\Shell32.dll.mun
 icacls "%SYSTEMROOT%\SystemResources\Shel32.dll.mun" /grant Users:F
 ren %SYSTEMROOT%\SystemResources\Shell32.dll.mun Shell32old.dll.mun
 @echo Taking ownership of Shell32.dll.mui
-cd %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\SHELL32\
-xcopy %USERPROFILE%\Downloads\GBTCPL11\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mun %SYSTEMROOT%\SystemResources
+cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\
+xcopy %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\SHELL32\Shell32.dll.mun %SYSTEMROOT%\SystemResources
 cd ..
 cd %SYSTEMROOT%\System32\your-locale
 :: i wanted to put the entire directory to avoid confusion lol
