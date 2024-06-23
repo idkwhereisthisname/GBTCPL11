@@ -22,6 +22,6 @@ Testers are always welcome (I cant get a VM because my pc only has 8GB of RAM).
 
   - This includes the navigation properties page
 
-- Default programs page
+- Default programs page (Kinda, because using StartAllBack11 restores the page, but not the links. Also explorer crashes more frequently when ExplorerPatcher and StartAllBack are installed togheter)
 
 ###### also sorry if this guide is badly written lol
