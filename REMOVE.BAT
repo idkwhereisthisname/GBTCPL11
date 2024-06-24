@@ -58,5 +58,5 @@ del %SYSTEMROOT%\system32\wucltux.dll
 cd %SYSTEMROOT%\system32\en-US
 del wucltux.dll.mui
 @echo Restarting explorer...
-explorer
 @echo Done! You can now close this window.
+@explorer

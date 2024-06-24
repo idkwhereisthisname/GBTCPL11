@@ -28,9 +28,12 @@ cd ..
 cd ACCCPL
 ADD.REG
 @echo credits to winaero :3 (again)
-: here starts the display options restore
 @echo.
-@echo Restoring the classic Display settings (also restores the links)
+@echo If you want to go further and restore the display applet, please press any key, otherwise, close this window.
+@echo.
+@timeout -1
+@echo Ok, restoring the classic display applet...
+: here starts the display options restore
 @echo.
 cd %SYSTEMROOT%\System32
 @echo Taking ownership of Display.dll...
@@ -79,10 +82,9 @@ cd %USERPROFILE%\downloads\gbtcpl11-main\WINUPD\reg
 WUCLTUX.REG
 regsvr32 wucltux.dll
 @echo.
-@echo Credits to a WinClassic thread (https://winclassic.net/thread/1779/restoring-control-panel-pages-links), I made the remove registry file, though
+@echo Credits to a WinClassic thread (https://winclassic.net/thread/1779/restoring-control-panel-pages-links), i made the remove registry file, though
 @echo.
-@echo Done! You can now close this window
+@echo Done! You can now close this window.
 @explorer
-exit
 : to do
 : cleanup the code (ex. if youre in the windows folder, from cd %SYSTEMROOT%\Windows\System32 to cd System32
