@@ -6,7 +6,7 @@
 
 3. Another thing, you should take ownership of the ```HKEY_CLASSES_ROOT\CLSID``` hive on the registry before continuing with the install, to do so, right click, authorizations, advanced, owner should  be ```TrustedInstaller```, click change, type your user, select all the checkmarks, press ok, click the full access box, press ok, exit regedit, and youre good to go!, or you can run the script as [TrustedInstaller](https://winaero.com/download-execti-run-as-trustedinstaller/)
 
-4. To get access to the system/about page in the control panel, use [ExplorerPatcher](https://github.com/valinet/ExplorerPatcher)
+4. To get access to the system/about page in the control panel, use [startallback](https://www.startallback.com/)
 
 5. If you cant run the script as TrustedInstaller, run it as an administrator
 
@@ -22,6 +22,6 @@ Testers are always welcome (I cant get a VM because my pc only has 8GB of RAM).
 
   - This includes the navigation properties page
 
-- Default programs page (Kinda, because using StartAllBack11 restores the page, but not the links. Also explorer crashes more frequently when ExplorerPatcher and StartAllBack are installed togheter)
+- Default programs page (Kinda, because using StartAllBack restores the page, but not the links.)
 
 ###### also sorry if this guide is badly written lol
