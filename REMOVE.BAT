@@ -37,20 +37,20 @@ del wucltux.dll.mui
 cd %USERPROFILE%\Downloads\GBTCPL11-main\DISPLAYCPL\REG
 REMOVE.reg
 taskkill /f /im explorer.exe
-cd %SYSTEMROOT%\System32\
 @echo Restoring Display.dll and .mui...
-del %SYSTEMROOT%\System32\Display.dll
-ren %SYSTEMROOT%\System32\Displayold.dll Display.dll
-cd %SYSTEMROOT%\en-US
-del %SYSTEMROOT%\en-US\Display.dll.mui
-ren %SYSTEMROOT%\en-US\Displayold.dll.mui Display.dll.mui
-cd %SYSTEMROOT%\SystemResources\
+cd %SYSTEMROOT%\System32\
+del Display.dll
+ren "Displayold.dll" "Display.dll"
+cd en-US
+del Display.dll.mui
+ren "Displayold.dll.mui" "Display.dll.mui"
 @echo Restoring Shell32.dll.mun and .mui...
-del %SYSTEMROOT%\SystemResources\Shell32.dll.mun
-ren %SYSTEMROOT%\SystemResources\Shell32old.dll.mun Shell32.dll.mun
+cd %SYSTEMROOT%\SystemResources\
+del Shell32.dll.mun
+ren "Shell32old.dll.mun" "Shell32.dll.mun"
 cd %SYSTEMROOT%\System32\en-US
-del %SYSTEMROOT%\System32\en-US\Shell32.dll.mui
-ren %SYSTEMROOT%\System32\en-US\Shell32old.dll.mui Shell32.dll.mui
+del Shell32.dll.mui
+ren "Shell32old.dll.mui" "Shell32.dll.mui"
 cd %USERPROFILE%\Downloads\GBTCPL11-main\
 @echo Reverting the Registry entries...
 reg delete HKEY_CLASSES_ROOT\CLSID\{C555438B-3C23-4769-A71F-B6D3D9B6053A}\Instance\InitPropertyBag /v ResourceDLL
